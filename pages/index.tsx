@@ -1,12 +1,18 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import dynamic from 'next/dynamic'
+import styles from "../styles/Home.module.css";
+
+const VideoComponent = dynamic(() => import('../components/video'),  { ssr: false });
 
 export default function Home() {
+  
+
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link href="//vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
       </Head>
 
       <main className={styles.main}>
@@ -15,9 +21,11 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <VideoComponent />
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -56,10 +64,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  )
+  );
 }

@@ -8,13 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/video.js": "^7.3.10",
+    "amazon-ivs-player": "^1.0.0",
     "next": "9.5.3",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "video.js": "^7.6.6"
   },
   "devDependencies": {
     "@types/node": "^14.6.3",
     "@types/react": "^16.9.49",
+    "file-loader": "^6.1.0",
     "typescript": "^4.0.2"
   }
 }
